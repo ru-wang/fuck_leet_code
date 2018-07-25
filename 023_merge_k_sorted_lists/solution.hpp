@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 
+namespace {
+
 struct ListNode {
     ListNode(int x) : val(x), next(nullptr) { }
 
@@ -11,6 +13,8 @@ struct ListNode {
     int val;
     ListNode *next;
 };
+
+}
 
 static auto _ = []() {
     std::ios::sync_with_stdio(false);
