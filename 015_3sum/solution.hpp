@@ -19,7 +19,7 @@ public:
         if (nums.size() == 3)
             return (nums[0] + nums[1] + nums[2] == 0) ?
                 vector<vector<int>>{ nums } : vector<vector<int>>{};
-        std::sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end());
         vector<vector<int>> triplets;
         for (int k = 0; k < nums.size() - 2; ++k) {
             if (k > 0 && nums[k] == nums[k-1])
