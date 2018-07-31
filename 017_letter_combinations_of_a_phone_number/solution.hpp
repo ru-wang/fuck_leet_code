@@ -17,7 +17,19 @@ public:
         if (digits.empty())
             return { };
         int len = 1;
+        for (char ch : digits)
+            len *= keyboard(ch).size();
         vector<string> ret(len, string(digits.size(), ' '));
+        for (int i = 0; i < digits.size(); ++i) {
+            const auto& chars = keyboard(digits[i]);
+            int repeat = len / chars.size();
+            int cycles = ret.size() / len;
+            for (int j = 0, id = 0; j < cycles; ++j)
+                for (int k = 0; k < chars.size(); ++k)
+                    for (int l = 0; l < repeat; ++l, ++id)
+                        ret[id][i] = chars[k];
+            len /= chars.size();
+        }
         return ret;
     }
 
