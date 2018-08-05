@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(leet_code_tests LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "-O0 -g -ggdb -fdiagnostics-color -pedantic")
 
 find_package(Eigen3 REQUIRED NO_MODULE)
